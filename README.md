@@ -1,7 +1,7 @@
 # Arduino
 
 Files to connect various components to arduino.
-Copy the files to the libraries folder for your Arduino software( for linux it is : /usr/share/Arduino). You will get examples for the relavent device in your arduino IDE.
+Copy the files to the libraries folder for your Arduino software( for linux it is : /usr/share/Arduino). You will get examples for the relevant device in your arduino IDE.
 
 1. Rotary Encoder:
 Rotary Encoder is used as a continuous rotation device. It can be used to count how many rotations have happened. A rotary or "shaft" encoder is an angular measuring device. It is used to precisely measure rotation of motors or to create wheel controllers (knobs) that can turn infinitely (with no end stop like a potentiometer has). Some of them are also equipped with a pushbutton when you press on the axis (like the ones used for navigation on many music controllers). They come in all kinds of resolutions, from maybe 16 to at least 1024 steps per revolution.
