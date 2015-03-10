@@ -51,4 +51,21 @@ Mega2560, Due: 20 21
 Leonardo: 2 3
 
 
-
+7. Gas Sensor - MQ
+The MQ series of gas sensors use a small heater inside with an electro-chemical sensor. They are sensitive for a range of gasses and are used indoors at room temperature.
+They can be calibrated more or less but a known concentration of the measured gas or gasses is needed for that. 
+The heater
+----------
+The voltage for the internal heater is very important.
+Some sensors use 5V for the heater, others need 2V. The 2V can be created with a PWM signal, using analogWrite() and a transistor or logic-level mosfet.
+The heater may not be connected directly to an output-pin of the Arduino, since it uses too much current for that.
+Some sensors need a few steps for the heater. This can be programmed with an analogWrite() function and delays. A transistor or logic-level mosfet should also in this situation be used for the heater.
+If it is used in a battery operated device, a transistor or logic-level mosfet could also be used to switch the heater on and off.
+The sensors that use 5V or 6V for the internal heater do get warm. They can easily get 50 or 60 degrees Celcius.
+After the "burn-in time", the heater needs to be on for about some time (3 minutes when tested with MQ-2) before the readings become stable. 
+Load-resistor
+--------------
+The sensor needs a load-resistor at the output to ground. It's value could be from 2kOhm to 47kOhm. The lower the value, the less sensitive. The higher the value, the less accurate for higher concentrations of gas.
+If only one specific gas is measured, the load-resistor can be calibrated by applying a know concentration of that gas. If the sensor is used to measure any gas (like in a air quality detector) the load-resistor could be set for a value of about 1V output with clean air.
+Choosing a good value for the load-resistor is only valid after the burn-in time. 
+Info source:http://playground.arduino.cc/Main/MQGasSensors#interesting
