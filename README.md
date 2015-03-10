@@ -32,7 +32,23 @@ The SD card examples are already present in the arduino GUI.
 5.. Soil Moisture Sensor-YL-69 - An example code is given in the Folder SoilMoistureSensor.
 Chinese-built YL-69. These sensors also come with a circuit which allows you to get two outputs: one is an analog readout of the resistance between the sensor’s two plates and the second is a digital output (essentially, HIGH or LOW, 5v or 0v) depending on whether the humidity is above or below a threshold which can in turn be adjusted by a built-in POTS. 
 The analog readout is connected to A0 pin in the Arduino Nano. The code reads out the input from the pin using an ADC and converts the value into the percentage of humidity present.
-
+6..BMP180 - barometric pressure and temperature sensor
+Like most pressure sensors, the BMP180 measures absolute pressure.
+Since absolute pressure varies with altitude, you can use the pressure
+to determine your altitude.
+Because pressure also varies with weather, you must first take a pressure
+reading at a known baseline altitude. Then you can measure variations
+from that pressure
+Hardware connections:
+- (GND) to GND
++ (VIN) to 3.3V
+(WARNING: do not connect + to 5V or the sensor will be damaged!)
+You will also need to connect the I2C pins (SCL and SDA) to your
+Arduino. The pins are different on different Arduinos:
+Any Arduino pins labeled: SDA SCL
+Uno, Redboard, Pro, Nano: A4 A5
+Mega2560, Due: 20 21
+Leonardo: 2 3
 
 
 
