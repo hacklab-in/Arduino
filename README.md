@@ -20,4 +20,12 @@ The DMP ("Digital Motion Processor") can do fast calculations directy on the chi
 3. GPS-GY-GPS6MV2
 The marking on pcb is GY-GPS6MV2. On pcb there are also a 3.3V regulator (so you can connect board to 5V power supply), a small battery for retaining data, nonvolatile storage for configuration and a green LED which starts blinking when the module has GPS data. Antenna is external active antenna and connects to the module via ufl connector.
 The GY-GPS/NEO6MV2 module comes with a U-Blox NEO 6 series module fitted upon the PCB, an EEPROM to store configuration, a button cell to keep EEPROM data intact, LED indicator, connectors and a ceramic antenna. It sometime happens that the LED doesn’t blink when the module is powered up, at first it seems that the module is faulty but in actual the LED indicator blinks only when it has got a lock on satellites. So, dont get dishearten, to see a non lit LED after powering up the module. For quick position lock it is suggested that you take the setup nearby window and try.
- 
+4. SD card reader
+The circuit:
+  * SD card attached to SPI bus as follows:
+ ** MOSI - pin 11 on Arduino Uno/Duemilanove/Diecimila
+ ** MISO - pin 12 on Arduino Uno/Duemilanove/Diecimila
+ ** CLK - pin 13 on Arduino Uno/Duemilanove/Diecimila
+ ** CS - depends on your SD card shield or module.
+        Pin 4 used here for consistency with other Arduino examples
+The SD card examples are already present in the arduino GUI
