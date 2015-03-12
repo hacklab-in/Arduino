@@ -40,8 +40,8 @@ Because pressure also varies with weather, you must first take a pressure
 reading at a known baseline altitude. Then you can measure variations
 from that pressure
 Hardware connections:
-- (GND) to GND
-+ (VIN) to 3.3V
+(GND) to GND
+(VIN) to 3.3V
 (WARNING: do not connect + to 5V or the sensor will be damaged!)
 You will also need to connect the I2C pins (SCL and SDA) to your
 Arduino. The pins are different on different Arduinos:
