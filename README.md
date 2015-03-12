@@ -39,7 +39,7 @@ Chinese-built YL-69. These sensors also come with a circuit which allows you to 
 The analog readout is connected to A0 pin in the Arduino Nano. The code reads out the input from the pin using an ADC and converts the value into the percentage of humidity present.
 
 
-6..BMP180 - barometric pressure and temperature sensor
+6.. BMP180 - barometric pressure and temperature sensor
 Like most pressure sensors, the BMP180 measures absolute pressure.
 Since absolute pressure varies with altitude, you can use the pressure
 to determine your altitude.
@@ -58,7 +58,7 @@ Mega2560, Due: 20 21
 Leonardo: 2 3
 
 
-7. Gas Sensor - MQ
+7.. Gas Sensor - MQ
 The MQ series of gas sensors use a small heater inside with an electro-chemical sensor. They are sensitive for a range of gasses and are used indoors at room temperature.
 They can be calibrated more or less but a known concentration of the measured gas or gasses is needed for that. 
 The heater
@@ -77,7 +77,7 @@ If only one specific gas is measured, the load-resistor can be calibrated by app
 Choosing a good value for the load-resistor is only valid after the burn-in time. 
 Info source:http://playground.arduino.cc/Main/MQGasSensors#interesting
 
-8..ADXL345 -Accelerometer
+8.. ADXL345 -Accelerometer
 The ADXL345 is a small, thin, low power, 3-axis accelerometer with high resolution (13-bit) measurement at up to ±16 g. Digital output data is formatted as 16-bit twos complement and is accessible through either a SPI (3- or 4-wire) or I2C digital interface. The ADXL345 is well suited to measure the static acceleration of gravity in tilt-sensing applications, as well as dynamic acceleration resulting from motion or shock. Its high resolution (4 mg/LSB) enables measurement of inclination changes less than 1.0°. Several special sensing functions are provided. Activity and inactivity sensing detect the presence or lack of motion and if the acceleration on any axis exceeds a user-set level. Tap sensing detects single and double taps. Free-fall sensing detects if the device is falling. These functions can be mapped to one of two interrupt output pins. An integrated, patent pending 32-level first in, first out (FIFO) buffer can be used to store data to minimize host processor intervention. Low power modes enable intelligent motion-based power management with threshold sensing and active acceleration measurement at extremely low power dissipation.
 It has both SPI and I2C interfaces.I2C is a 2-wire serial connection, so you just need to connect the SDA (Data) and SCL (Clock) lines to your Arduino for communication. On your Arduino (everything but the mega) SDA is on analog pin 4, and SCL is on analog pin 5. On an arduino mega, SDA is digital 20, and SCL is digital 21.
 Make sure both VCC and the CS pins on the sensor are connected to 3.3v. We connect CS to 3.3V to tell the sensor we will be using it as an I2C device, and not an SPI device.
