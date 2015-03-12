@@ -34,12 +34,12 @@ The circuit:
 The SD card examples are already present in the arduino GUI.
 
 
-5.. Soil Moisture Sensor-YL-69 - An example code is given in the Folder SoilMoistureSensor.
+5. Soil Moisture Sensor-YL-69 - An example code is given in the Folder SoilMoistureSensor.
 Chinese-built YL-69. These sensors also come with a circuit which allows you to get two outputs: one is an analog readout of the resistance between the sensor’s two plates and the second is a digital output (essentially, HIGH or LOW, 5v or 0v) depending on whether the humidity is above or below a threshold which can in turn be adjusted by a built-in POTS. 
 The analog readout is connected to A0 pin in the Arduino Nano. The code reads out the input from the pin using an ADC and converts the value into the percentage of humidity present.
 
 
-6.. BMP180 - barometric pressure and temperature sensor
+6. BMP180 - barometric pressure and temperature sensor
 Like most pressure sensors, the BMP180 measures absolute pressure.
 Since absolute pressure varies with altitude, you can use the pressure
 to determine your altitude.
@@ -58,7 +58,7 @@ Mega2560, Due: 20 21
 Leonardo: 2 3
 
 
-7.. Gas Sensor - MQ
+7. Gas Sensor - MQ
 The MQ series of gas sensors use a small heater inside with an electro-chemical sensor. They are sensitive for a range of gasses and are used indoors at room temperature.
 They can be calibrated more or less but a known concentration of the measured gas or gasses is needed for that. 
 The heater
@@ -77,7 +77,7 @@ If only one specific gas is measured, the load-resistor can be calibrated by app
 Choosing a good value for the load-resistor is only valid after the burn-in time. 
 Info source:http://playground.arduino.cc/Main/MQGasSensors#interesting
 
-8.. ADXL345 -Accelerometer:
+8. ADXL345 -Accelerometer:
 The ADXL345 is a small, thin, low power, 3-axis accelerometer with high resolution (13-bit) measurement at up to ±16 g. Digital output data is formatted as 16-bit twos complement and is accessible through either a SPI (3- or 4-wire) or I2C digital interface. The ADXL345 is well suited to measure the static acceleration of gravity in tilt-sensing applications, as well as dynamic acceleration resulting from motion or shock. Its high resolution (4 mg/LSB) enables measurement of inclination changes less than 1.0°. Several special sensing functions are provided. Activity and inactivity sensing detect the presence or lack of motion and if the acceleration on any axis exceeds a user-set level. Tap sensing detects single and double taps. Free-fall sensing detects if the device is falling. These functions can be mapped to one of two interrupt output pins. An integrated, patent pending 32-level first in, first out (FIFO) buffer can be used to store data to minimize host processor intervention. Low power modes enable intelligent motion-based power management with threshold sensing and active acceleration measurement at extremely low power dissipation.
 It has both SPI and I2C interfaces.I2C is a 2-wire serial connection, so you just need to connect the SDA (Data) and SCL (Clock) lines to your Arduino for communication. On your Arduino (everything but the mega) SDA is on analog pin 4, and SCL is on analog pin 5. On an arduino mega, SDA is digital 20, and SCL is digital 21.
 Make sure both VCC and the CS pins on the sensor are connected to 3.3v. We connect CS to 3.3V to tell the sensor we will be using it as an I2C device, and not an SPI device.
@@ -90,7 +90,7 @@ Arduino Pin 	ADXL345 Pin
 3V3 		VCC
 Gnd 		GND
 
-9.. TSL2561:- Luminosity Sensor
+9. TSL2561:- Luminosity Sensor
 The TSL2561 is an inexpensive, yet sophisticated, light sensor. Unlike simpler sensors, like photoresistors and photodiodes, the TSL2561 incorporates both infrared and visible light sensors to better approximate the response of the human eye. Because the TSL2561 is an integrating sensor (it soaks up light for a predetermined amount of time), it is capable of measuring both very small and very large amounts of light. One lux is equal to one lumen per square meter. Practically, lux is a measure of how bright any given illumination will appear to the human eye.The human eye has a huge dynamic range, far more than most electronic sensors. Real-world conditions can range from 0.0001 lux in starlight, to over 100,000 lux in direct sunlight. The TSL2561 has features that allow it to handle this huge dynamic range. These settings are similar to a camera; one can change both the sensitivity, which is like an ASA film rating, and the integration time, which is like the shutter speed. Like a camera, you can balance those measurements for the best results.
 
 Lux is a very complex measurement to make because it involves both the human eye’s response to color (frequency) and the concentration of that light (a flashlight will produce a higher lux value than the equivalent bare bulb). The TSL2561 is not a true luxmeter, but the manufacturer of the TSL2561 has characterized its output against professional equipment to come up with lux approximation equations. (You can find these equations in the datasheet, and we’re also using them in our software library.) It should be noted that although these equations will get you in the ballpark, the TSL2561 is not a calibrated instrument (nor is it priced like one). If you need highly accurate results you should at least perform your own calibration. For everyday use however, the TSL2561 is far superior to simpler photoresistors and photodiodes for illumination measurement.
