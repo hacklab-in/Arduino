@@ -151,4 +151,4 @@ HC-SR04 Specifications
     Trigger Input Signal: 10µS TTL pulse
     Echo Output Signal Input TTL lever signal and the range in proportion
     Dimension 45 * 20 * 15mm
-
+![HC-SR04 connections to arduino](http://1.bp.blogspot.com/-N_ZACn8oFOw/UoHr8aMDCEI/AAAAAAAAAHw/X5q-sCOamOg/s1600/HC-SR04-basic-connect_bb.png)
