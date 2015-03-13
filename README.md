@@ -93,8 +93,32 @@ Gnd 		GND
 9. TSL2561:- Luminosity Sensor
 The TSL2561 is an inexpensive, yet sophisticated, light sensor. Unlike simpler sensors, like photoresistors and photodiodes, the TSL2561 incorporates both infrared and visible light sensors to better approximate the response of the human eye. Because the TSL2561 is an integrating sensor (it soaks up light for a predetermined amount of time), it is capable of measuring both very small and very large amounts of light. One lux is equal to one lumen per square meter. Practically, lux is a measure of how bright any given illumination will appear to the human eye.The human eye has a huge dynamic range, far more than most electronic sensors. Real-world conditions can range from 0.0001 lux in starlight, to over 100,000 lux in direct sunlight. The TSL2561 has features that allow it to handle this huge dynamic range. These settings are similar to a camera; one can change both the sensitivity, which is like an ASA film rating, and the integration time, which is like the shutter speed. Like a camera, you can balance those measurements for the best results.Lux is a very complex measurement to make because it involves both the human eye’s response to color (frequency) and the concentration of that light (a flashlight will produce a higher lux value than the equivalent bare bulb). The TSL2561 is not a true luxmeter, but the manufacturer of the TSL2561 has characterized its output against professional equipment to come up with lux approximation equations. (You can find these equations in the datasheet.) It should be noted that although these equations will get you in the ballpark, the TSL2561 is not a calibrated instrument (nor is it priced like one). If you need highly accurate results you should at least perform your own calibration. For everyday use however, the TSL2561 is far superior to simpler photoresistors and photodiodes for illumination measurement.
 
-10.. A3144 Hall-Effect Sensor:   The A3144 is an integrated Hall effect non-latching sensor. Holding a magnet near the sensor will cause the output pin to toggle. This makes for a robust presence sensor. . The device includes an on-chip Hall voltage generator for magnetic sensing, a comparator that amplifies the Hall voltage, and a Schmitt trigger to provide switching hysteresis for noise rejection, and open-collector output. An internal bandgap regulator is used to provide temperature compensated supply voltage for internal circuits and allows a wide operating supply range.
+10. A3144 Hall-Effect Sensor:   The A3144 is an integrated Hall effect non-latching sensor. Holding a magnet near the sensor will cause the output pin to toggle. This makes for a robust presence sensor. . The device includes an on-chip Hall voltage generator for magnetic sensing, a comparator that amplifies the Hall voltage, and a Schmitt trigger to provide switching hysteresis for noise rejection, and open-collector output. An internal bandgap regulator is used to provide temperature compensated supply voltage for internal circuits and allows a wide operating supply range.
 If a magnetic flux density larger than threshold Bop, the output is turned on (low). The output state is held until a magnetic flux density reversal falls below Brp causing the output to be turned off (high).
 Connection
 ----------
 ![Connection Hall Effect Sensor](http://bildr.org/blog/wp-content/uploads/2011/04/0h090u1-400x302.png "Connection Hall Effect Sensor. Similar Connection for A3144")
+
+11. BH1750 Light Intensity Sensor
+BH1750 light intensity sensor breakout board with a 16 bit AD converter built-in which can directly output a digital signal, there is no need for complicated calculations. This is a more acurate and easier to use version of the simple foto resistor which only outputs a voltage that needs to be calculated in order to obtain meaningful data. With the BH1750 Light Sensor intensity can be directly measured by the luxmeter, without needing to make calculations. The data which is output by this sensor is directly output in Lux (Lx). When objects which are lighted in homogeneous get the 1 lx luminous flux in one square meter ,their light intensity is 1lx. Sometimes to take good advantage of the illuminant, you can add a reflector to the illuminant.So that there will be more luminous flux in some directions and it can increase the ilumination of the target surface. 
+For example
+
+    Night: 0.001--0.02;  
+    moonlightnight:0.02--0.3;  
+    cloudy indoor:5--50;
+    cloudy outdoor:50--500;
+    Sunny indoor:100--1000;
+    under the sunlight in summer afternoon: about 10*6 power; 
+    reading books for intensity of illumination:50--60;
+    home video standard intensity of illumination:1400
+Specification
+--------------
+power supply voltage: +3 to 5Vdc
+Interface: I2C
+Wide range and High resolution. ( 1 - 65535 lx )
+It is possible to select 2 types of I2C slave-address.
+Small measurement variation (+/- 20%)
+Size: 0.85*0.63*0.13"(21*16*3.3mm)
+Connection Diagram
+------------------
+http://cdn.instructables.com/F0H/Q2D2/HLZRHA0P/F0HQ2D2HLZRHA0P.LARGE.jpg
