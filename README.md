@@ -102,7 +102,6 @@ Connection
 11. BH1750 Light Intensity Sensor
 BH1750 light intensity sensor breakout board with a 16 bit AD converter built-in which can directly output a digital signal, there is no need for complicated calculations. This is a more acurate and easier to use version of the simple foto resistor which only outputs a voltage that needs to be calculated in order to obtain meaningful data. With the BH1750 Light Sensor intensity can be directly measured by the luxmeter, without needing to make calculations. The data which is output by this sensor is directly output in Lux (Lx). When objects which are lighted in homogeneous get the 1 lx luminous flux in one square meter ,their light intensity is 1lx. Sometimes to take good advantage of the illuminant, you can add a reflector to the illuminant.So that there will be more luminous flux in some directions and it can increase the ilumination of the target surface. 
 For example
-
     Night: 0.001--0.02;  
     moonlightnight:0.02--0.3;  
     cloudy indoor:5--50;
@@ -122,3 +121,21 @@ Size: 0.85*0.63*0.13"(21*16*3.3mm)
 Connection Diagram
 ------------------
 ![Connection Diagram](http://cdn.instructables.com/F0H/Q2D2/HLZRHA0P/F0HQ2D2HLZRHA0P.LARGE.jpg?raw=true "Connection Diagram")
+
+12. Human Capacitive Sensor
+The capacitiveSensor library turns two or more Arduino pins into a capacitive sensor, which can sense the electrical capacitance of the human body. All the sensor setup requires is a medium to high value resistor and a piece of wire and a small (to large) piece of aluminum foil on the end. At its most sensitive, the sensor will start to sense a hand or body inches away from the sensor. 
+Applications
+------------
+Capacitive sensing may be used in any place where low to no force human touch sensing is desirable. An Arduino and the library may be used to sense human touch through more than a quarter of an inch of plastic, wood, ceramic or other insulating material (not any kind of metal though), enabling the sensor to be completely visually concealed.
+A capacitive sensor covered with paper or other insulator also acts as fairly good (human touch) pressure sensor with an approximately logarithmic response. In this regard it may surpass force sensing resistors in some applications.
+![Capacitive Sensing](http://playground.arduino.cc/uploads/Main/CapSense.gif)
+The capacitiveSensor method toggles a microcontroller send pin to a new state and then waits for the receive pin to change to the same state as the send pin. A variable is incremented inside a while loop to time the receive pin's state change. The method then reports the variable's value, which is in arbitrary units. 
+The physical setup includes a medium to high value (100 kilohm - 50 megohm) resistor between the send pin and the receive (sensor) pin. The receive pin is the sensor terminal. A wire connected to this pin with a piece of foil at the end makes a good sensor. For many applications, a more useful range of values is obtained if the sensor is covered with paper, plastic, or another insulating material, so that users do not actually touch the metal foil. Research has shown that a small capacitor (100 pF) or so from sensor pin to ground improves stability and repeatability.
+When the send pin changes state, it will eventually change the state of the receive pin. The delay between the send pin changing and the receive pin changing is determined by an RC time constant, defined by R * C, where R is the value of the resistor and C is the capacitance at the receive pin, plus any other capacitance (e.g. human body interaction) present at the sensor (receive) pin. Adding small capacitor (20 - 400 pF) in parallel with the body capacitance, is highly desirable too, as it stabilizes the sensed readings.  
+-    Use a 1 megohm resistor (or less maybe) for absolute touch to activate.
+-    With a 10 megohm resistor the sensor will start to respond 4-6 inches away.
+-    With a 40 megohm resistor the sensor will start to respond 12-24 inches away (dependent on the foil size). Common resistor sizes usually end at 10 megohm so you may have to solder four 10 megohm resistors end to end.
+-    One tradeoff with larger resistors is that the sensor's increased sensitivity means that it is slower. Also if the sensor is exposed metal, it is possible that the send pin will never be able to force a change in the receive (sensor) pin, and the sensor will timeout.
+-    Also experiment with small capacitors (100 pF - .01 uF) to ground, on the sense pin. They improve stability of the sensor. 
+The grounding of the Arduino board is very important in capacitive sensing. The board needs to have some connection to ground, even if this is not a low-impedance path such as a wire attached to a water pipe.
+More info:http://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense
