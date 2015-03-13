@@ -113,11 +113,11 @@ For example
     home video standard intensity of illumination:1400
 Specification
 --------------
-power supply voltage: +3 to 5Vdc
-Interface: I2C
-Wide range and High resolution. ( 1 - 65535 lx )
+power supply voltage: +3 to 5Vdc.
+Interface: I2C.
+Wide range and High resolution. ( 1 - 65535 lx ).
 It is possible to select 2 types of I2C slave-address.
-Small measurement variation (+/- 20%)
+Small measurement variation (+/- 20%).
 Size: 0.85*0.63*0.13"(21*16*3.3mm)
 Connection Diagram
 ------------------
