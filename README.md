@@ -97,7 +97,7 @@ The TSL2561 is an inexpensive, yet sophisticated, light sensor. Unlike simpler s
 If a magnetic flux density larger than threshold Bop, the output is turned on (low). The output state is held until a magnetic flux density reversal falls below Brp causing the output to be turned off (high).
 Connection
 ----------
-![Connection Hall Effect Sensor](http://bildr.org/blog/wp-content/uploads/2011/04/0h090u1-400x302.png "Connection Hall Effect Sensor. Similar Connection for A3144")
+![Connection Hall Effect Sensor](http://bildr.org/blog/wp-content/uploads/2011/04/0h090u1-400x302.png?raw=true "Connection Hall Effect Sensor. Similar Connection for A3144")
 
 11. BH1750 Light Intensity Sensor
 BH1750 light intensity sensor breakout board with a 16 bit AD converter built-in which can directly output a digital signal, there is no need for complicated calculations. This is a more acurate and easier to use version of the simple foto resistor which only outputs a voltage that needs to be calculated in order to obtain meaningful data. With the BH1750 Light Sensor intensity can be directly measured by the luxmeter, without needing to make calculations. The data which is output by this sensor is directly output in Lux (Lx). When objects which are lighted in homogeneous get the 1 lx luminous flux in one square meter ,their light intensity is 1lx. Sometimes to take good advantage of the illuminant, you can add a reflector to the illuminant.So that there will be more luminous flux in some directions and it can increase the ilumination of the target surface. 
@@ -121,4 +121,4 @@ Small measurement variation (+/- 20%)
 Size: 0.85*0.63*0.13"(21*16*3.3mm)
 Connection Diagram
 ------------------
-![Connection Diagram](http://cdn.instructables.com/F0H/Q2D2/HLZRHA0P/F0HQ2D2HLZRHA0P.LARGE.jpg "Connection Diagram")
+![Connection Diagram](http://cdn.instructables.com/F0H/Q2D2/HLZRHA0P/F0HQ2D2HLZRHA0P.LARGE.jpg?raw=true "Connection Diagram")
