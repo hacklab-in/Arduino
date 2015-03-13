@@ -139,3 +139,16 @@ When the send pin changes state, it will eventually change the state of the rece
 	   Also experiment with small capacitors (100 pF - .01 uF) to ground, on the sense pin. They improve stability of the sensor. 
 The grounding of the Arduino board is very important in capacitive sensing. The board needs to have some connection to ground, even if this is not a low-impedance path such as a wire attached to a water pipe.
 More info:http://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense
+13. HC-SR04 
+HC-SR04 is an ultrasonic ranging module that provides 2 cm to 400 cm non-contact measurement function. The ranging accuracy can reach to 3mm and effectual angle is < 15°. It can be powered from a 5V power supply.
+HC-SR04 Specifications
+    Working Voltage: DC 5V
+    Working Current: 15mA
+    Working Frequency: 40Hz
+    Max Range: 4m
+    Min Range: 2cm
+    Measuring Angle: 15 degree
+    Trigger Input Signal: 10µS TTL pulse
+    Echo Output Signal Input TTL lever signal and the range in proportion
+    Dimension 45 * 20 * 15mm
+
