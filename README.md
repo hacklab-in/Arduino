@@ -121,4 +121,4 @@ Small measurement variation (+/- 20%)
 Size: 0.85*0.63*0.13"(21*16*3.3mm)
 Connection Diagram
 ------------------
-http://cdn.instructables.com/F0H/Q2D2/HLZRHA0P/F0HQ2D2HLZRHA0P.LARGE.jpg
+![Connection Diagram](http://cdn.instructables.com/F0H/Q2D2/HLZRHA0P/F0HQ2D2HLZRHA0P.LARGE.jpg "Connection Diagram")
