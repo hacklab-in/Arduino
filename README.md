@@ -154,7 +154,7 @@ HC-SR04 Specifications
     Dimension 45 * 20 * 15mm
 ![HC-SR04 connections to arduino](http://1.bp.blogspot.com/-N_ZACn8oFOw/UoHr8aMDCEI/AAAAAAAAAHw/X5q-sCOamOg/s1600/HC-SR04-basic-connect_bb.png)
 
-14.USC-32 Servo Controller Module
+14. USC-32 Servo Controller Module
 32-bit high speed CPU, faster, more accurate and more stable.Identify the baud rate automatically(9600,19200,38400,57600,115200,12800).
 USB can power the chip. The USB port and the chip power supply is isolated, to prevent the reverse current flow ing into USB. Because the servo motor needs high current, to power the chip and the motor with the same supply is not recommendable.Too many motors,working at the same time might reset the chip.However,to prevent this problem,the power supply can be shared indirectly as follows:  
 If the power supply voltage is 12V,it can be separated into two groups (2 lines into 4 lines), in which two lines can be regulated to the right voltage of the motor by regulators to power the motors and the other two lines can be connected with the power supply port of the chip on the board directly.(Because there is already a regulator on-board).
