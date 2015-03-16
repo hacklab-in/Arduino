@@ -8,6 +8,7 @@ Rotary Encoder is used as a continuous rotation device. It can be used to count 
 ![Rotary Encoders](https://hifiduino.files.wordpress.com/2010/10/rotenc.jpg)
 2. MPU-6050 Accelerometer + Gyro
 The InvenSense MPU-6050 sensor contains a MEMS accelerometer and a MEMS gyro in a single chip. It is very accurate, as it contains 16-bits analog to digital conversion hardware for each channel. Therefor it captures the x, y, and z channel at the same time. The sensor uses the I2C-bus to interface with the Arduino. Reading the raw values for the accelerometer and gyro is easy. The sleep mode has to be disabled, and then the registers for the accelerometer and gyro can be read. But the sensor also contains a 1024 byte FIFO buffer. The sensor values can be programmed to be placed in the FIFO buffer. And the buffer can be read by the Arduino.
+![Accelerometer + Gyro](http://jamesmpoe.com/roboticswiki/images/4/45/MPU6050-Arduino-Uno-Connections.jpg)
 The FIFO buffer is used together with the interrupt signal. If the MPU-6050 places data in the FIFO buffer, it signals the Arduino with the interrupt signal so the Arduino knows that there is data in the FIFO buffer waiting to be read.
 A little more complicated is the ability to control a second I2C-device.
 The MPU-6050 always acts as a slave to the Arduino with the SDA and SCL pins connected to the I2C-bus.
