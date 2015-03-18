@@ -168,3 +168,11 @@ Connection diagram
 ------------------
 ![Connection Diagram](https://electronpi.files.wordpress.com/2013/05/electret_bb.png)
 
+
+16. IRF540 -N channel power mosfet
+Drain-Source Voltage MAX (Vds)100V
+Gate Source Voltage MAX(VGS) 20V
+Continuous Drain Current Id 28A(temp=25 C),20A(temp=100C)
+Connection of mosfet as a switch
+------------------------------
+![Connection diagram as a switch](https://engenhocas4you.files.wordpress.com/2012/04/trsw07.jpg)
