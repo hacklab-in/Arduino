@@ -160,3 +160,11 @@ USB can power the chip. The USB port and the chip power supply is isolated, to p
 If the power supply voltage is 12V,it can be separated into two groups (2 lines into 4 lines), in which two lines can be regulated to the right voltage of the motor by regulators to power the motors and the other two lines can be connected with the power supply port of the chip on the board directly.(Because there is already a regulator on-board).
 32-channel servo controller needs two power supplies, one for servo and the other for the chip. The chip can be powered via USB by the computer, but the servo can not be powered through the USB port because of the servo’s high power cost. If you use USB to power the servo,it might burn out your computer and the servo control board. If you do not use USB to power the chip, you can use the VSS powersupply port in the figure below, and the input voltage must be between 6.5V~ 12V.
 ![32-channel servo controller](http://www.elechouse.com/elechouse/images/product/32-Channel%20Servo%20Controller%20V2/mini_USB_motor_C.jpg)
+
+15. Electret Microphone Connection:
+Find the polarity of the microphone as shown below
+![Electret Microphone](http://cdn.instructables.com/F4G/K0IQ/HCB8U55R/F4GK0IQHCB8U55R.LARGE.jpg)
+Connection diagram
+------------------
+![Connection Diagram](https://electronpi.files.wordpress.com/2013/05/electret_bb.png)
+
