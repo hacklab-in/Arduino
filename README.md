@@ -194,6 +194,7 @@ Specifications
     Standby Current: 0.6 µA (typical value)
     Board Size: 19.8 x 14.2 mm
 Pin Connections
+---------------
 VCC ---------- +5v Power supply
 GND ---------- GND Power supply
 L   ---------- Left channel input (Arduino/Raspberry Pi)
