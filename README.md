@@ -176,3 +176,29 @@ Continuous Drain Current Id 28A(temp=25 C),20A(temp=100C)
 Connection of mosfet as a switch
 ------------------------------
 ![Connection diagram as a switch](https://engenhocas4you.files.wordpress.com/2012/04/trsw07.jpg)
+
+17. Speaker -8 ohm
+Finding +ve and -ve of the speaker
+------------------------------
+Take a 1.5v battery and connect it to the speaker for a short time.If the speaker moves OUT when the battery is first connected, the battery is connected in proper alignment. Be sure to take note of which wire is connected to the positive terminal of the battery as this is your speaker's positive terminal. 
+To test: Connect the D8 pin of the arduino board with the speaker +ve wire and run the toneMelody program.
+
+18. HXJ8002- mini audio amplifier
+This miniature audio amplifier module is ideal for adding audio output capabilities to your new project. It is based on the HXJ8002 single channel 3 W BTL power audio amplifier chip, which features a low harmonic distortion of the audio signal.
+Specifications
+----------------
+    On-board HXJ8002 chip
+    Number of channels: single
+    Output power: 3 W (for a 3 Ω load), 2.5 W (4 Ω load), 1.5 W (8 Ω load)
+    Working Voltage Range: 2 V to 5.5 V
+    Standby Current: 0.6 µA (typical value)
+    Board Size: 19.8 x 14.2 mm
+Pin Connections
+VCC ---------- +5v Power supply
+GND ---------- GND Power supply
+L   ---------- Left channel input (Arduino/Raspberry Pi)
+R   ---------- Right channel input (Arduino/Raspberry Pi)
+V1  ---------- Speaker GND/negative
+V2  ---------- Speaker positive
+![HXJ8002](http://www.lctech-inc.com/Images/Product/05d9d00e-2d81-4b06-b87e-305d6aa381c1.jpg)
+To test connect to the D8 pin in arduino and run the toneMelody program from examples.
