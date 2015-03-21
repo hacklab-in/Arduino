@@ -180,7 +180,9 @@ Connection of mosfet as a switch
 17. Speaker -8 ohm
 Finding +ve and -ve of the speaker
 ------------------------------
-Take a 1.5v battery and connect it to the speaker for a short time.If the speaker moves OUT when the battery is first connected, the battery is connected in proper alignment. Be sure to take note of which wire is connected to the positive terminal of the battery as this is your speaker's positive terminal. 
+1.Take a 1.5v battery and connect it to the speaker for a short time.If the speaker moves OUT when the battery is first connected, the battery is connected in proper alignment. Be sure to take note of which wire is connected to the positive terminal of the battery as this is your speaker's positive terminal. 
+2.Speaker with smaller contact as the negative terminal
+![Speaker Connection](http://www.techguys.ca/howto/images/speaker_terminals.jpg)
 To test: Connect the D8 pin of the arduino board with the speaker +ve wire and run the toneMelody program.
 
 18. HXJ8002- mini audio amplifier
@@ -203,3 +205,10 @@ V1  ---------- Speaker GND/negative
 V2  ---------- Speaker positive
 ![HXJ8002](http://www.lctech-inc.com/Images/Product/05d9d00e-2d81-4b06-b87e-305d6aa381c1.jpg)
 To test connect to the D8 pin in arduino and run the toneMelody program from examples.
+
+19. OLED 
+ LCD library for Arduino- U8GLIB is used to communicate with the OLED module. The SSD1306 has two different signal lines for the I2C data signal (one for input and one for output). However the pins of this OLED module are only connected to the input data line of the SSD1306. As a result it can not send the I2C ACK (it will be also invisible to any I2C scanner). This display from HelTec is connected to 5V power supply. Data and clock lines accept 5V signals and do not need a pullup resistor.
+To support this display, the I2C constructor requires a special option:
+U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NO_ACK); 
+![Connection Diagram](http://www.hobbyist.co.nz/sites/default/files/NetSensor/ArduinoOledWiring_bb.png)
+
