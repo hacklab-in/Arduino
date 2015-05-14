@@ -13,8 +13,8 @@
  * http://rayshobby.net/?p=10156
  */
 
-#define SSID  "your_ssid"      // change this to match your WiFi SSID
-#define PASS  "your_password"  // change this to match your WiFi password
+#define SSID  "Harison"      // change this to match your WiFi SSID
+#define PASS  "8867396716"  // change this to match your WiFi password
 #define PORT  "80"             // using port 80 by default
 
 /* ======================================
@@ -22,12 +22,12 @@
  * use the SearchBaud example to find it.
  * ======================================
  */
-#define ESP_BAUD_RATE 115200 // assume 115200 baud rate
+#define ESP_BAUD_RATE 9600 // assume 115200 baud rate
 
-#define PIN_BUTTON  3
-#define PIN_RED     12
-#define PIN_GREEN   13
-#define PIN_BLUE    14
+#define PIN_BUTTON  5
+#define PIN_RED     11
+#define PIN_GREEN   12
+#define PIN_BLUE    13
 
 // Ethernet buffer
 #define BUFFER_SIZE 500
@@ -42,12 +42,14 @@ SoftwareSerial dbg(7,8);  // use pins 7, 8 for software Serial
 #define esp Serial
 #define DBG_BAUD_RATE 9600  // software Serial can only go up to 9600bps
 */
+#include <SoftwareSerial.h>
+SoftwareSerial esp(2,3);  // use pins 7, 8 for software Serial 
 
 // If your MCU has dual hardware USARTs (e.g. ATmega644)
 // use the definitions below
 #define dbg Serial    // use Serial for debug
-#define esp Serial1   // use Serial1 to talk to esp8266
-#define DBG_BAUD_RATE 115200  // hardware Serial can go up to 115200bps
+//#define esp Serial1   // use Serial1 to talk to esp8266
+#define DBG_BAUD_RATE 9600  // hardware Serial can go up to 115200bps
 
 byte findKeyVal (const char *str,char *strbuf, uint8_t maxlen,const char *key);
 
